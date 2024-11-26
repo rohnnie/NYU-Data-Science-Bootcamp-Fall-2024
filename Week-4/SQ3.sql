@@ -1,0 +1,5 @@
+--3.Pull total number of customers that purchased in January 2023 and the average amount spend per customer.
+SELECT C.CUSTOMER_ID,C.FIRST_NAME,C.LAST_NAME,AVG(REVENUE) AS AVG_COST
+FROM CUSTOMERS C JOIN SALES S ON C.CUSTOMER_ID=S.CUSTOMER_ID
+WHERE DATE BETWEEN '2023-03-01' AND '2023-03-31'
+GROUP BY C.CUSTOMER_ID;
